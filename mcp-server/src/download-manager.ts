@@ -255,7 +255,7 @@ export class DownloadManager {
     );
 
     const results = await Promise.all(downloadPromises);
-    const successCount = results.filter(r => r.status === 'success').length;
+    const successCount = results.filter((r: DownloadResult) => r.status === 'success').length;
     
     this.logger.info(`Batch download completed: ${successCount}/${results.length} successful`);
     
