@@ -138,7 +138,7 @@ class PexelsMCPServer {
         if (error instanceof McpError) {
           throw error;
         }
-        throw new McpError(ErrorCode.InternalError, `Tool execution failed: ${error.message}`);
+        throw new McpError(ErrorCode.InternalError, `Tool execution failed: ${(error as Error).message}`);
       }
     });
   }
