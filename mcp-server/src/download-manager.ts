@@ -63,9 +63,11 @@ export interface VideoMetadata {
   };
 }
 
+type LimitFunction = ReturnType<typeof pLimit>;
+
 export class DownloadManager {
   private downloadPath: string;
-  private concurrencyLimit: pLimit.Limit;
+  private concurrencyLimit: LimitFunction;
   private logger: Logger;
   private metadataFile: string;
   private downloadedVideos: Set<number>;
