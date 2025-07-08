@@ -47,11 +47,6 @@ class PexelsMCPServer {
       {
         name: process.env.MCP_SERVER_NAME || 'pexels-media-server',
         version: process.env.MCP_SERVER_VERSION || '1.0.0',
-      },
-      {
-        capabilities: {
-          tools: {},
-        },
       }
     );
 
