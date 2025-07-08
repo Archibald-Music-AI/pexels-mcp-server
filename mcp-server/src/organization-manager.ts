@@ -95,7 +95,7 @@ export class OrganizationManager {
               }
             }
           }
-        } catch (error) {
+        } catch (error: any) {
           this.logger.error(`Error organizing video ${video.id}:`, error);
           result.errors.push(`Video ${video.id}: ${error.message}`);
         }
