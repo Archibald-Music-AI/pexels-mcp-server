@@ -214,8 +214,9 @@ class PexelsMCPServer {
 }
 
 // Start the server
-const server = new PexelsMCPServer();
-server.run().catch((error) => {
+const logger = new Logger();
+const server = new PexelsMCPServer(logger);
+server.run().catch((error: any) => {
   console.error('Server failed to start:', error);
   process.exit(1);
 });
