@@ -105,7 +105,7 @@ export class OrganizationManager {
       await fs.writeJson(metadataFile, metadata, { spaces: 2 });
 
       this.logger.info(`Organization completed: ${result.moved_files} files moved into ${result.categories_created.length} categories`);
-    } catch (error) {
+    } catch (error: any) {
       this.logger.error('Error during organization:', error);
       result.status = 'failed';
       result.errors.push(error.message);
