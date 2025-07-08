@@ -229,7 +229,7 @@ export class DownloadManager {
           bitrate: '',
         },
         status: 'failed',
-        error: error.message,
+        error: error?.message || 'Unknown error',
       };
     }
   }
