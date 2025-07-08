@@ -41,8 +41,8 @@ class PexelsMCPServer {
   private usageTracker: UsageTracker;
   private logger: Logger;
 
-  constructor() {
-    this.logger = new Logger();
+  constructor(logger: Logger) {
+    this.logger = logger;
     this.server = new Server(
       {
         name: process.env.MCP_SERVER_NAME || 'pexels-media-server',
