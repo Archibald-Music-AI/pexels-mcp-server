@@ -293,7 +293,7 @@ export class DownloadManager {
   }
 
   private selectBestQuality(videoFiles: any[], quality: string) {
-    const qualityOrder = {
+    const qualityOrder: { [key: string]: string[] } = {
       hd: ['hd', 'sd', 'mobile'],
       sd: ['sd', 'hd', 'mobile'],
       mobile: ['mobile', 'sd', 'hd'],
