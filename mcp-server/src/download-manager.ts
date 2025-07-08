@@ -212,7 +212,7 @@ export class DownloadManager {
 
       this.logger.info(`Successfully downloaded video ${videoId}`);
       return result;
-    } catch (error) {
+    } catch (error: any) {
       this.logger.error(`Error downloading video ${videoId}:`, error);
       
       return {
